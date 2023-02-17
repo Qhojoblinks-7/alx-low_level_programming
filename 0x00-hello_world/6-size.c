@@ -8,18 +8,18 @@
 
 int main(void)
 {
-	int integertype;
-	long longtype;
-	float floattype;
-	char chartype;
-	double doubletype;
+	int a; i[10]
+	long b;
+	float e;
+	char f;
+	double g;
 
 	/*sizeof oprator is used to evaluate the size osf a variable*/
-	printf("Size of int: %ld bytes\n", sizeof(integertype));
-	printf("Size of long: %ld bytes\n", sizeof(longtype));
-	printf("size of float:%ld bytes\n", sizeof(floattype));
-	printf("size of char: %ld bytes\n" sizeof(chartype));
-	printf("size of double: %ld bytes\n" sizeof(doubletype));
+	printf("Size of int=%lu byte(s)\n"), sizeof(a);
+	printf("Size of long=%lu byte(s)\n"), sizeof(b);
+	printf("size of float=%lu byte(s)\n"), sizeof(e);
+	printf("size of char=%lu byte(s)\n"), sizeof(f);
+	printf("size of double=%lu byte(s)\n"), sizeof(g);
 
 	return (0);
 }
