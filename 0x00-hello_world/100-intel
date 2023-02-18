@@ -1,2 +1,2 @@
-#!/bin/bash
-gcc -masm=intel $CFILE -o -S
+#include <stdio.h>
+gcc -S -masm=intel $CFILE
