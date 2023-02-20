@@ -2,7 +2,7 @@
 
 /**
  * main - print all the lowercase letters in thge reverse form
- * followed by a new line 
+ * followed by a new line
  * Return: Alway 0
  */
 int main(void)
