@@ -7,21 +7,30 @@
 
 int main(void)
 {
-	long int num = 612852475143;
-	int prime;
+	long int n;
+	long int max;
+	long int i;
 
-	for (prime = 2; prime <= sqrt(num); prime++)
+	n = 612852475143;
+	max = -1;
+
+	while (n % 2 == 0)
 	{
-		
+		max = 2;
+		n /= 2;
+	}
 
-		if (num % prime == 0)
+	for (i = 3; i <= sqrt(n); i = i + 2)
+	{
+		while (n % i == 0)
 		{
-			
-			num = num / prime;
-			prime = 1;
-		 printf("%ld\n", num);
+			max = i;
+			n = n/i;
 		}
 	}
-	printf("%ld\n", num);
-return (0);
+	if (n > 2)
+		max = n;
+	printf("%ld\n", max);
+
+	return (0);
 }
