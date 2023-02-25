@@ -7,7 +7,7 @@
  * numbers should be in ascending order
  * the first printed number should be passed to the function
  * the last printed number should be 98
- * @n: function parameter
+ * @n: starting number to print
  * Return: void
  */
 
@@ -15,7 +15,7 @@ void print_to_98(int n)
 {
 	int i;
 
-	if (n >= 0 && n <= 98)
+	if (n <= 98)
 	{
 		for (i = n ; i <= 98; i++)
 		{
