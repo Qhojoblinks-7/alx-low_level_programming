@@ -7,7 +7,7 @@
  * numbers should be in ascending order
  * the first printed number should be passed to the function
  * the last printed number should be 98
- * @n: starting number to print.
+ * @n: starting number to print
  * Return: void
  */
 
