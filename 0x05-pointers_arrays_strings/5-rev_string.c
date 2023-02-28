@@ -12,9 +12,9 @@ void rev_string(char *s)
 		m = 0;
 		len = 0;
 
-	while (s[m] != '\0')
+	while (s[n] != '\0')
 	{
-		m++;
+		n++;
 	}
 
 	len = m;
