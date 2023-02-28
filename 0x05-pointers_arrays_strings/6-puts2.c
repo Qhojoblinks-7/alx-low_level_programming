@@ -4,6 +4,7 @@
  * puts2 - a function that prints every character of a string,
  * starting from the first character
  * followed by a new line
+ *
  * @str: the string to be printed
  */
 
