@@ -1,25 +1,24 @@
 #include "main.h"
 
 /**
- * print_rev - a function that prints a string in reverse fromat
- * ther to ways to the this
- * we have the simple one that with your function,
- * you declear a variable and init it to the function strlen()
- *  which calculates the the lenght of values or characters
- *  now using the the for loop, you iterate over the characters or
- *  values in the other you want with the index (len + or -1)
- *  dependind on the the order, you increament or decreamet and then
- *  you can use putchar or printf to output ur results
+ * print_rev - a function that prints a string in reverse format
  *  @s: the charater to be evaluated
  */
 
 void print_rev(char *s)
 {
-	int len = strlen(s);
+	int a, b, len;
+		a = 0;
 
-	for (int i = len - 1; i >= 0; i--)
+	while (s[a] != '\0')
 	{
-	_putchar(s[i]);
+		a++;
 	}
+	len = a;
+
+		for (b = len - 1; b >= 0; b--)
+		{
+			_putchar(s[b]);
+		}
 	_putchar('\n');
 }
