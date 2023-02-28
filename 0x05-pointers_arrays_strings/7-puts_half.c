@@ -33,8 +33,9 @@ void puts_half(char *str)
 	int length = _strlen(str);
 	int start_index = length % 2 == 0 ? length / 2 : (length - 1) / 2;
 
+	int i;
 
-	for (int i = start_index; i < length; i++)
+	for (i = start_index; i < length; i++)
 	{
 		_putchar(str[i]);
 	}
