@@ -35,6 +35,15 @@ void puts_half(char *str)
 
 	int i;
 
+
+	for (i = 0; i < length; i++)
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
+
+
+
 	for (i = start_index; i < length; i++)
 	{
 		_putchar(str[i]);
