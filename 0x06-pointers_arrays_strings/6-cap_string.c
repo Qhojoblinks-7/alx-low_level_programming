@@ -9,19 +9,26 @@
 
 char *cap_string(char *str)
 {
-	int i = 0;
+	int i, j;
 
-	while (str[i] != '\0')
+	char spe[] = {' ', ',', '.', '"', '?', '(', ')', '\t', '\n', '{', '}', ';'};
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-	if (i == 0 || isspace(str[i - 1]))
+	if (i == 0 && str[i] >= 'a' &&  str[i] <= 'z')
+	str[i] -= 32;
+
+	for (j = 0; j < 13; j++)
 	{
-	str[i] = toupper(str[i]);
-	}
-	else
+	if (str[i] == spe[j])
 	{
-	str[i] = tolower(str[i]);
+		if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+		{
+		str[i + 1] -= 32;
+		}
 	}
-	i++;
 	}
+	}
+
 	return (str);
 }
