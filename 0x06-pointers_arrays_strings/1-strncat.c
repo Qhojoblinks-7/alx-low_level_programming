@@ -1,8 +1,6 @@
 #include "main.h"
 #include <string.h>
 
-#define MAX_LEN 100
-
 /**
  * _strncat - a function that joit a limited number of character
  * to a destination string
@@ -22,7 +20,7 @@ char *_strncat(char *dest, char *src, int n)
 	while (dest[i] != '\0')
 	i++;
 
-	while (src[j] != '\0' && j < 0)
+	while (src[j] != '\0' && j < n)
 
 	{
 		dest[i] = src[j];
