@@ -8,8 +8,8 @@
 
 char *rot13(char *str)
 {
-	char q[] = "HELLO MANhello man";
-	char y[] = "UPYYB ZNAupyyb zna";
+	char q[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char y[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	char i, j;
 	char *c = str;
