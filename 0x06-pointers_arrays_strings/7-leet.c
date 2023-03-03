@@ -16,7 +16,7 @@ char *leet(char *str)
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		for (j = 0; c[j] != '\0'; j++)
+		for (j = 0; leet_char[j] != '\0'; j++)
 		{
 			if (c[i] == leet_char[j] || c[i] == leet_char[j] + 32)
 			{
