@@ -8,20 +8,22 @@
 
 char *rot13(char *str)
 {
+	char q[] = "HELLO MANhello man";
+	char y[] = "UPYYB ZNAupyyb zna";
+
+	char i, j;
 	char *c = str;
-	char i;
 
-
-	for (i = 0; c[i] != '\0'; i++)
-	{
-		if (c[i] >= 'a' && c[i] <= 'z')
+		for (i = 0; c[i] != '\0'; i++)
 		{
-			c[i] = ((c[i] - 'a' + 13) % 26) + 'a';
+			for (j = 0; q[j] != '\0'; j++)
+			{
+				if (c[i] == q[j])
+				{
+					c[i] = y[j];
+					break;
+				}
+			}
 		}
-		else if (c[i] >= 'A' && c[i] <= 'Z')
-		{
-			c[i] = ((c[i] - 'A' + 13) % 26) + 'A';
-		}
-	}
 	return (str);
 }
