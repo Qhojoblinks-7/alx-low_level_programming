@@ -16,7 +16,7 @@ int isPrintableASCII(int n)
  * @start: starting position
  * @end: ending position
  */
-void printhexes(char *b, int start, int end)
+void printHexes(char *b, int start, int end)
 {
 	int i = 0;
 
@@ -71,6 +71,7 @@ void print_buffer(char *b, int size)
 			printASCII(b, start, end);
 			printf("\n");
 		}
-	}else
+	}
+	else
 		printf("\n");
 }
