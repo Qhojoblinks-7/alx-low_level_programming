@@ -3,51 +3,58 @@
 #include <stdlib.h>
 
 /**
- * str_concat - function that concatenates two strings.
- *              if NULL is passed, treat it as an empty string
- *              The function should return NULL on failure
- *
- * @s1: This is the output string
- * @s2: This is the input string
- *
- * Return: The returned pointer should point to a newly allocated space in
- *         memory which contains the contents of s1, followed by the contents
- *         of s2, and null terminated
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: length
  */
 
-char *str_concat(char *s1, char *s2)
+int _strlen(char *s)
 {
-	int a, b;
-	char *s;
+	int len = 0;
 
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
-	for (a = 0; s1[a] != '\0'; a++)
-	{
-	}
-	for (b = 0; s2[b] != '\0'; b++)
-	{
-	}
+	while (*s != '\0')
+		len++, s++;
 
-	s = (char *)  malloc(((a + b) + 1) * sizeof(char));
-
-	if (s == NULL)
-		return (NULL);
-	for (a = 0; s1[a] != '\0'; a++)
-	{
-		s[a] = s1[a];
-	}
-	for (b = 0; s2[b] != '\0'; b++)
-	{
-		s[a] = s2[b];
-		a++;
-	}
-	return (s);
+	return (len);
 }
 
+/**
+ * argstostr - concatenates all the arguments of your program
+ * @ac: argc
+ * @av: arguments
+ * Return: pointer to array
+ */
+
+char *argstostr(int ac, char **av)
+{
+	char *s;
+	int len = 0, i, j, k = 0;
+
+	if (ac == 0 || av == NULL)
+		return (NULL);
+
+	for (i = 0; i < ac; i++)
+	{
+		len += _strlen(av[i]);
+	}
+	len += (ac + 1);
+
+	s = malloc(len * sizeof(char));
+
+	if (s == NULL)
+	{
+		free(s);
+		return (NULL);
+	}
+
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; j < _strlen(av[i]); j++)
+		{
+			s[k++] = av[i][j];
+		}
+		s[k++] = '\n';
+	}
+
+	return (s);
+}
