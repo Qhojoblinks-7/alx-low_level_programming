@@ -24,7 +24,7 @@ int main(void)
 		putchar('0' + (comb_1 % 10));
 		putchar(' ');
 
-		for ( comb_2 = comb_1 +1; comb_2 < 100; comb_2++)
+		for (comb_2 = comb_1 + 1; comb_2 < 100; comb_2++)
 		{
 			putchar('0' + (comb_2 / 10));
 			putchar('0' + (comb_2 % 10));
