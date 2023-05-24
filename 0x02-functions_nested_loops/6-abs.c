@@ -21,7 +21,7 @@ int _abs(int num)
 	if (num < 0)
 	{
 		result = num * -1;
-		_putchar(result);
+		_putchar('0' + result);
 	}
 
 	else

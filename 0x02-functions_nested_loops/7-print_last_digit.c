@@ -13,9 +13,11 @@ int print_last_digit(int num)
 {
 	int last_digit;
 
+	int abs_num = _abs(num);
+
 	/* this operation calcs for the last digit */
 	/* of the number which is the remainder */
-	last_digit = num % 10;
+	last_digit = abs_num % 10;
 
 	/* the '0' character is added to the args of */
 	/* the _putchar function so the result can be */
