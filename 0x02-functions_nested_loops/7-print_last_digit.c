@@ -13,10 +13,6 @@ int print_last_digit(int num)
 {
 	int last_digit;
 
-	/* using the _abs function to get the */
-	/* absolute value of the number */
-	num = _abs(num);
-
 	/* this operation calcs for the last digit */
 	/* of the number which is the remainder */
 	last_digit = num % 10;

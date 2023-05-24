@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "makn.h"
+#include "main.h"
 
 /**
  * print_alphabet - a function that prints the

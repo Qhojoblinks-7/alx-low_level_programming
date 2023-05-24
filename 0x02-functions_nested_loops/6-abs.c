@@ -27,7 +27,7 @@ int _abs(int num)
 	else
 	{
 		result = num;
-		_putchar(result);
+		_putchar('0' + result);
 	}
 	return (result);
 }
