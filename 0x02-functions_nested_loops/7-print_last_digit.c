@@ -13,7 +13,7 @@ int print_last_digit(int num)
 {
 	int last_digit;
 
-	int abs_num = _abs(num);
+	int _abs(num);
 
 	/* this operation calcs for the last digit */
 	/* of the number which is the remainder */
