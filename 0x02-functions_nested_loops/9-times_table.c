@@ -27,11 +27,6 @@ void times_table(void)
 				_putchar(',');
 				_putchar(' ');
 			}
-			else
-			{
-				_putchar(' ');
-				_putchar(' ');
-			}
 
 			/* this part of the code checks if the product is */
 			/*  <= 10. if true, the first statement prints the */
@@ -44,7 +39,6 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar(' ');
 				_putchar('0' + product);
 			}
 		}
