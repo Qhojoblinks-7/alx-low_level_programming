@@ -17,20 +17,18 @@ void print_square(int size)
 {
 	int length, breath;
 
-	for (length = 0; length <= size; length++)
+	if (size <=0)
 	{
-		for (breath = 0; breath <= length; breath++)
-		{
-			_putchar(' ');
-		}
-
-		if (size <= 0)
-		{
-			_putchar('\n');
-		}
-
-		_putchar('#');
 		_putchar('\n');
 	}
-	_putchar('\n');
+
+	for (length = 1; length <= size; length++)
+	{
+		for (breath = 1; breath <= size; breath++)
+		{
+			_putchar('#');
+			_putchar(' ');
+		}
+		_putchar('\n');
+	}
 }
