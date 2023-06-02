@@ -14,8 +14,8 @@ char *leet(char *str)
 {
 	int i = 0;
 	int j = 0;
-	char leetchar[] = "aAeEoOtTlL";
-	char leet_digit[] = "4433007711";
+	char leetChar[] = "aAeEoOtTlL";
+	char leetDigit[] = "4433007711";
 
 	while (str[i] != '\0')
 	{
