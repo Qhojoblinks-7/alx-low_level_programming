@@ -19,11 +19,12 @@ char *leet(char *str)
 
 	while (str[i] != '\0')
 	{
-		while (*leetchar[j] != '\0')
+		j = 0;
+		while (leetChar[j] != '\0')
 		{
-			if (str[i] == *leetchar[j])
+			if (str[i] == leetChar[j])
 			{
-				str[i] = *leet_digit[j];
+				str[i] = leetDigit[j];
 				break;
 			}
 			j++;

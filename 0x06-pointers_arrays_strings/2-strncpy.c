@@ -34,19 +34,17 @@ int _stringLen(const char *str)
 char *_strncpy(char *dest, char *src, int n)
 {
 	int a;
-	int destLen;
 
-	destLen = _stringLen(dest);
 
 	for (a = 0; a < n && src[a] != '\0'; a++)
 	{
 		dest[a] = src[a];
 	}
-	if (destLen < n)
+
+	if (a < n)
 	{
-		dest[n] = '\0';
+		dest[a] = '\0';
 	}
 
-	dest[a] = '\0';
 	return (dest);
 }
