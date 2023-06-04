@@ -1,6 +1,7 @@
 #include "main.h"
 
-/** print_number - A fuction that prints an integer without using
+/**
+ * print_number - A fuction that prints an integer without using
  * long ints.
  *
  * @n: number to be printed
@@ -36,5 +37,5 @@ void print_number(int n)
 		n %= divisor;
 	       divisor	/= 10;
 
-	} while ( divisor != 0);
+	} while (divisor != 0);
 }
