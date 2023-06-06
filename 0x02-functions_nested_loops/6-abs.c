@@ -21,13 +21,11 @@ int _abs(int num)
 	if (num < 0)
 	{
 		result = num * -1;
-		_putchar('0' + result);
 	}
 
 	else
 	{
 		result = num;
-		_putchar('0' + result);
 	}
 	return (result);
 }
