@@ -7,6 +7,7 @@
  * if 'size' is 0 or less print newline
  * use the character # to print the triangle
  *
+ * @size: size of the triangle
  * Return: nothing
  */
 
@@ -14,17 +15,17 @@ void print_triangle(int size)
 {
 	int length, breath, space;
 
-	if ( size <= 0)
+	if (size <= 0)
 	{
 		_putchar('\n');
 		return;
 	}
 
-	for ( breath = 1; breath <= size; breath++)
+	for (breath = 1; breath <= size; breath++)
 	{
 		space = size - breath;
 
-		for ( length = 1; length <= space; length++)
+		for (length = 1; length <= space; length++)
 		{
 			_putchar(' ');
 		}
