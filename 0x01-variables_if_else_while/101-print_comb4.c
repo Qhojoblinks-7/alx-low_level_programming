@@ -26,8 +26,8 @@ int main(void)
 				putchar('0' + comb_3);
 
 
-				if (comb_num1 != last_num/100 || 
-					comb_num2 != (last_num % 100)/10 || 
+				if (comb_num1 != last_num / 100 ||
+					comb_num2 != (last_num % 100) / 10 ||
 					comb_3 != last_num % 10)
 				{
 					putchar(',');
