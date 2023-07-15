@@ -11,7 +11,7 @@
  * in ascending order
  * 00 01 and 01 00 are considered as the same combination
  * of the numbers 0 and 1
- * Retuurn: 0
+ * Return: 0
  */
 
 int main(void)
