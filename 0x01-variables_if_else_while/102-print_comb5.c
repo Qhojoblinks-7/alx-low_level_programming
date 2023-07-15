@@ -20,23 +20,25 @@ int main(void)
 
 	for (comb_1 = 0; comb_1 < 100; comb_1++)
 	{
-		putchar('0' + (comb_1 / 10));
-		putchar('0' + (comb_1 % 10));
-		putchar(' ');
-
 		for (comb_2 = comb_1 + 1; comb_2 < 100; comb_2++)
 		{
-			putchar('0' + (comb_2 / 10));
-			putchar('0' + (comb_2 % 10));
-
-			if (comb_2 < 99)
+			if (comb_1 != comb_2)
 			{
-				putchar(',');
+				putchar('0' + (comb_1 / 10));
+				putchar('0' + (comb_1 % 10));
 				putchar(' ');
+				putchar('0' + (comb_2 / 10));
+				putchar('0' + (comb_2 % 10));
+
+				if (comb_1 < 98 || comb_2 < 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
-		putchar('\n');
 	}
+	putchar('\n');
 	return (0);
 }
 
