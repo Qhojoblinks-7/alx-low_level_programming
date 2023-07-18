@@ -15,14 +15,14 @@ int main(void)
 	for (count = 2; count < 49; count++)
 	{
 		next = first_num + second_num;
-		
+
 		printf("%d", next);
 
 		if (count < 49)
 		{
 			printf(", ");
 		}
-		else if(count >48)
+		else if(count > 48)
 		{
 		    continue;
 		}
