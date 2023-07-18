@@ -27,7 +27,7 @@ int main(void)
 		    continue;
 		}
 		first_num = second_num;
-		second = next; 
+		second_num = next; 
 	}
 	printf("\n");
 	return (0);
