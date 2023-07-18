@@ -38,7 +38,6 @@ void print_times_table(int n)
                 if (product < 10)
                 {
                     _putchar(' ');
-                    _putchar(' ');
                 }
                 else if (product < 100)
                 {
