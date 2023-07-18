@@ -20,6 +20,6 @@ int main(void)
 		first_num = second_num;
 		second_num = next;
 	}
-	printf("%d", even_sum);
+	printf("%d\n", even_sum);
 	return (0);
 }
