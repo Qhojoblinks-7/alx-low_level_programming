@@ -17,7 +17,7 @@ void print_times_table(int n)
 
     if (n < 0 || n > 15)
     {
-        return; // Stop execution for invalid input.
+        return; /* Stop execution for invalid input.*/
     }
 
     for (num1 = 0; num1 <= n; num1++)
