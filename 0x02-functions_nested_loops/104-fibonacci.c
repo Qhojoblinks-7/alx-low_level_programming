@@ -23,12 +23,12 @@ int main(void)
 			{
 				printf(", ");
 			}
-			else if(count > 47)
+			else if (count > 47)
 			{
 				continue;
 			}
 			first_num = second_num;
-			second = next;
+			second_num = next;
 		}
 	}
 	printf("\n");
