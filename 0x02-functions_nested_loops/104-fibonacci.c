@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - a function that prints the first 50
+ * main - a function that prints the first 98
  * fibonacci number
  * Return:0
  */
@@ -11,13 +11,13 @@ int main(void)
 
 	printf("%lu, %lu, ", first_num, second_num);
 
-	for (count = 2; count < 50; count++)
+	for (count = 2; count < 98; count++)
 	{
 		next = first_num + second_num;
 
 		printf("%lu", next);
 
-		if (count < 49)
+		if (count < 97)
 		{
 			printf(", ");
 		}
