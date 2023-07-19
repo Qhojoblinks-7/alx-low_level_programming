@@ -15,6 +15,7 @@
 void print_times_table(int n)
 {
 	int num1, num2, product;
+
 	if (n < 0 || n > 15)
 	{
 		return; /* Stop execution for invalid input.*/
@@ -35,14 +36,14 @@ void print_times_table(int n)
 				_putchar(',');
 				_putchar(' ');
 
-				if (product < 10){
+				if (product < 10)
+				{
 				}
-				
+
 				else if (product < 100)
 				{
 					_putchar(' ');
 				}
-
 				if (product >= 100)
 				{
 				       	_putchar(product / 100 + '0');
@@ -56,12 +57,13 @@ void print_times_table(int n)
 				else
 				{
 					_putchar(' ');
-					_putchar(' ' );
+					_putchar(' ' )
 				}
 				
 				_putchar(product % 10 + '0');
 			}
 		}
-		_putchar('\n'); /* Add a new line after each row.*/
+		_putchar('\n');
+		/* Add a new line after each row.*/
 	}
 }
