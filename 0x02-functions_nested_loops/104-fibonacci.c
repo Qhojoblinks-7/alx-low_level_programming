@@ -7,30 +7,26 @@
 
 int main(void)
 {
-	int first_num = 1, second_num = 2, count, next;
+	unsigned long long int first_num = 1, second_num = 2, count, next;
 
-	printf("%d, %d, ", first_num, second_num);
+	printf("%llu, %llu, ", first_num, second_num);
 
-	for (count = 2; count < 49; count++)
+	for (count = 2; count < 50; count++)
 	{
 		next = first_num + second_num;
 
-		printf("%d", next);
+		printf("%llu", next);
 
 		if (count < 49)
 		{
-			if (count < 97)
-			{
-				printf(", ");
-			}
-			else if (count > 47)
-			{
-				continue;
-			}
-			first_num = second_num;
-			second_num = next;
+			printf(", ");
 		}
+		else
+		{
+			printf("\n");
+		}
+		first_num = second_num;
+		second_num = next;
 	}
-	printf("\n");
 	return (0);
 }
