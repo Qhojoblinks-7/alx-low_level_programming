@@ -7,15 +7,15 @@
 
 int main(void)
 {
-	unsigned long long int first_num = 1, second_num = 2, count, next;
+	unsigned long int first_num = 1, second_num = 2, count, next;
 
-	printf("%llu, %llu, ", first_num, second_num);
+	printf("%lu, %lu, ", first_num, second_num);
 
 	for (count = 2; count < 50; count++)
 	{
 		next = first_num + second_num;
 
-		printf("%llu", next);
+		printf("%lu", next);
 
 		if (count < 49)
 		{
