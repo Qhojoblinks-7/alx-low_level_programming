@@ -11,7 +11,7 @@ int main(void)
 
 	printf("%lu, %lu, ", first_num, second_num);
 
-	for (count = 2; count <= 97; count++)
+	for (count = 2; count < 100; count++)
 	{
 		next = first_num + second_num;
 
