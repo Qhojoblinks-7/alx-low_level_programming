@@ -12,15 +12,15 @@ void rev_string(char *s)
 {
 	char temp; /* to store string temprarily */
 	int length; /* to help check the length of the string */
-	int start; /* to mark the begining of the string */
-	int end; /* to mark the end of the string */
-	char i; /* to help iterate while printing the reversed string */
+	int start = 0;; /* to mark the begining of the string */
+	int end = 0; /* to mark the end of the string */
 
 	/* calculating the length of the string */
 	while (s[length] != '\0')
 	{
 		length++;
 	}
+	end = length -1;
 
 	/* now we do the swapping */
 	while (start < end)
@@ -34,9 +34,9 @@ void rev_string(char *s)
 
 		/* printing the reversed string */
 		i = 0;
-		while (s[start] != '\0')
+		while (s[i] != '\0')
 		{
-			_putchar('0' + s[start]);
+			_putchar(s[i]);
 			i++;
 		}
 		_putchar('\n');
