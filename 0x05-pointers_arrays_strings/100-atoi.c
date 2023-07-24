@@ -40,23 +40,3 @@ int _atoi(char *s)
 	}
 	return (result * sign);
 }
-
-/**
- * main - a function that prints the outcome of the function atoi
- * Return: 0
- */
-
-int main(void)
-{
-	char stringA[] = "123";
-	char stringB[] = "-456";
-	char stringC[] = "   +789";
-	char stringD[] = "abc";
-
-	printf("%d\n", _atoi(stringA));
-	printf("%d\n", _atoi(stringB));
-	printf("%d\n", _atoi(stringC));
-	printf("%d\n", _atoi(stringD));
-
-	return (0);
-}
