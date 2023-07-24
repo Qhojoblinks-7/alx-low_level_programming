@@ -12,8 +12,9 @@ void rev_string(char *s)
 {
 	char temp; /* to store string temprarily */
 	int length; /* to help check the length of the string */
-	int start = 0;; /* to mark the begining of the string */
+	int start = 0; /* to mark the begining of the string */
 	int end = 0; /* to mark the end of the string */
+	int i;
 
 	/* calculating the length of the string */
 	while (s[length] != '\0')
