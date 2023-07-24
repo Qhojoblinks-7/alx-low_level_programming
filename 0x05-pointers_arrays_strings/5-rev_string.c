@@ -14,7 +14,7 @@ void rev_string(char *s)
 	int length; /* to help check the length of the string */
 	int start = 0; /* to mark the begining of the string */
 	int end = 0; /* to mark the end of the string */
-
+	int i;
 	/* calculating the length of the string */
 	while (s[length] != '\0')
 	{
@@ -33,7 +33,7 @@ void rev_string(char *s)
 
 
 		/* printing the reversed string */
-		int i = 0;
+		i = 0;
 		while (s[i] != '\0')
 		{
 			_putchar(s[i]);
