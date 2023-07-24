@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 /* Function to generate a random character from a given character set*/
 char getRandomChar(const char* charSet) {
@@ -10,7 +11,8 @@ char getRandomChar(const char* charSet) {
 
 /* Function to generate a random password*/
 void generateRandomPassword(char* password, int length, const char* charSet) {
-    for (int i = 0; i < length; i++) {
+    	int i;
+	for (i = 0; i < length; i++) {
         password[i] = getRandomChar(charSet);
     }
     password[length] = '\0';
