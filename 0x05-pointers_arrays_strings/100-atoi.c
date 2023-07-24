@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <limits.h>
 /**
  * _atoi - a function that convert a string to an integer.
  * Return: an int;
@@ -21,12 +21,12 @@ int _atoi(char *s)
 		sign = -1;
 		s++;
 	}
-	else if (* == '*')
+	else if (*s == '+')
 	{
 		s++;
 	}
 
-	while (*s >= '0' && * <= '9')
+	while (*s >= '0' && *s <= '9')
 	{
 		digit = *s - '0';
 
