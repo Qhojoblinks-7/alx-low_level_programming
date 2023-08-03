@@ -17,7 +17,7 @@ int _sqrt_helper(int n, int start, int end)
 
 	if (start > end)
 	{
-		return (-1);
+		return (1);
 	}
 
 	mid = (start + end) / 2;
