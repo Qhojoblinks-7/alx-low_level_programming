@@ -9,19 +9,13 @@
 
 void _print_rev_recursion(char *s)
 {
-	int n;
-
-	scanf("%d", &n);
-
-	*s = n -1;
-
 	if (*s == '\0')
 	{
 		_putchar('\n');
 	}
 	else
 	{
-		_print_rev_recursion(s - 1);
+		_print_rev_recursion(s + 1);
 		_putchar(*s);
 	}
 }

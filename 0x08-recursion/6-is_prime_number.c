@@ -20,7 +20,7 @@ int is_divisible(int n, int divisor)
 		return (1);
 	}
 
-	return is_divisible(n, divisor + 1);
+	return (is_divisible(n, divisor + 1));
 }
 
 /**
@@ -31,7 +31,6 @@ int is_divisible(int n, int divisor)
  */
 int is_prime_number(int n)
 {
-	int i;
 	if (n <= 1)
 	{
 		return (0);
