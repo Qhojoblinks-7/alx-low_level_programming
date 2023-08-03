@@ -1,18 +1,18 @@
 #include "main.h"
 
-char *_strncpy(char *dest, char *src, int n) {
+#include "main.h"
+
+char *_strcat(char *dest, char *src) {
     char *start = dest;
-    while (*src && n > 0) {
+    while (*dest) {
+        dest++;
+    }
+    while (*src) {
         *dest = *src;
         dest++;
         src++;
-        n--;
     }
-    while (n > 0) {
-        *dest = '\0';
-        dest++;
-        n--;
-    }
+    *dest = '\0';
     return start;
 }
 
