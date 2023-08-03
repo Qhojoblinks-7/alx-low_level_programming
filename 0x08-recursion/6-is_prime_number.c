@@ -5,7 +5,7 @@
  * is_divisible - a function that returns 1 if the
  * input integer is a prime number, otherwise return 0
  * @n: prime number
- * @divisor: divisor 
+ * @divisor: divisor
  * Return: an int
  */
 int is_divisible(int n, int divisor)
@@ -36,5 +36,5 @@ int is_prime_number(int n)
 		return (0);
 	}
 
-	return !is_divisible(n, 2);
+	return (!is_divisible(n, 2);
 }
