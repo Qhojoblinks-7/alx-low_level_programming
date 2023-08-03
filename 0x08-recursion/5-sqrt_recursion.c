@@ -12,13 +12,16 @@
 
 int _sqrt_helper(int n, int start, int end)
 {
+	int mid = 0;
+	int square = 0;
+
 	if (start > end)
 	{
 		return (-1);
 	}
 
-	int mid = (start + end) / 2;
-	int square = mid * mid;
+	mid = (start + end) / 2;
+	square = mid * mid;
 
 	if (square == n)
 	{
@@ -26,11 +29,11 @@ int _sqrt_helper(int n, int start, int end)
 	}
 	else if (square > n)
 	{
-		return (sqrt_helpe(n, start., mid - 1));
+		return (_sqrt_helpe(n, start, mid - 1));
 	}
 	else
 	{
-		return (sqrt_helpe(n, mid + 1, end));
+		return (_sqrt_helpe(n, mid + 1, end));
 	}
 }
 
