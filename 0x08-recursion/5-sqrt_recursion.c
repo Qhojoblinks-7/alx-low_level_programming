@@ -5,8 +5,7 @@
  * _sqrt_helper - This is the recursive helper function,
  * which uses binary search to find the natural square root of n
  * @n: the number to work on
- * @start:the number to begin with
- * @end: the end of the nuber
+ * @i:the number to begin
  * Return: an integer
  */
 
@@ -39,7 +38,7 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	
+
 	if (n == 0  || n == 1)
 	{
 		return (n);
