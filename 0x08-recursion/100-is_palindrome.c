@@ -17,7 +17,7 @@ int is_palindrome(char *s)
 	}
 	j = len - 1;
 
-	while (i < j)
+	if (i < j)
 	{
 		if (s[i] != s[j])
 		{
