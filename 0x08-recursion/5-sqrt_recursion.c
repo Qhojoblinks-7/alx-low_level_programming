@@ -10,22 +10,17 @@
  * Return: an integer
  */
 
-int _sqrt_helper(int n, int start, int end)
+int _sqrt_helper(int n, int i)
 {
-	int mid = 0;
-	int square = 0;
 
-	if (start > end)
+	if (i * i > n)
 	{
-		return (1);
+		return (-1);
 	}
 
-	mid = (start + end) / 2;
-	square = mid * mid;
-
-	if (square == n)
+	if (i * i == n)
 	{
-		return (mid);
+		return (i);
 	}
 	else if (square > n)
 	{
@@ -33,7 +28,7 @@ int _sqrt_helper(int n, int start, int end)
 	}
 	else
 	{
-		return (_sqrt_helper(n, mid + 1, end));
+		return (_sqrt_helper(n, i + 1));
 	}
 }
 
@@ -51,8 +46,10 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	else
+	
+	if (n == 0  || n == 1)
 	{
-		return (_sqrt_helper(n, 0, n));
+		return (n);
 	}
+	return (_sqrt_helper(n, 0, n));
 }
