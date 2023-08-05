@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * multiply - Function to multiply two numbers
@@ -22,7 +23,7 @@ int multiply(int num1, int num2)
  * Return: The product of num1 and num2
  */
 
-int main( int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{
@@ -37,4 +38,4 @@ int main( int argc, char *argv[])
 	printf("%d\n", product);
 
 	return (0);
-}	
+}
