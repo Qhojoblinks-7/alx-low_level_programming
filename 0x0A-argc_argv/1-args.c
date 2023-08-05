@@ -8,11 +8,11 @@
  * Return: Always 0 (Success)
  */
 
-int main(int argc, char *argv[])
+int main(int argc)
 {
 	int count = argc - 1;
 
 	printf("%d\n", count);
 
-	return (0)
+	return (0);
 }

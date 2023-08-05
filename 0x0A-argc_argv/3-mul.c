@@ -13,7 +13,16 @@ int multiply(int num1, int num2)
 	return (num1 * num2);
 }
 
-int main(nt argc, char *argv[])
+
+/**
+ * main - Function to multiply two numbers
+ * @argv: First number
+ * @argc: Second number
+ *
+ * Return: The product of num1 and num2
+ */
+
+int main( argc, char *argv[])
 {
 	if (argc != 3)
 	{

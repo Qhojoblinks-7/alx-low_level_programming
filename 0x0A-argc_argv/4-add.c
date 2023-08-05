@@ -36,7 +36,7 @@ int is_positive_number(char *str)
 int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int num;
+	int num, i;
 
 	if (argc == 1)
 	{
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	for (int i = 1; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 		if (!is_positive_number(argv[i]))
 		{
