@@ -22,7 +22,7 @@ int multiply(int num1, int num2)
  * Return: The product of num1 and num2
  */
 
-int main( argc, char *argv[])
+int main( int argc, char *argv[])
 {
 	if (argc != 3)
 	{

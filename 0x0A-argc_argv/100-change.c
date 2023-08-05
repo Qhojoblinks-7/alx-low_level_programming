@@ -39,21 +39,19 @@ int main(int argc, char *argv[])
  * Return: count
  */
 
-int mini_coins(int coins)
+int mini_coins(int cents)
 {
-	int coin[] = {25, 10, 5, 2, 1};
-	int count = 0;
+	int coins[] = {25, 10, 5, 2, 1};
+	int numCoins = 0;
 
 	int i;
 
-	for (int i = 0; i < 5; i++)
+	for (i = 0; i < 5; i++)
 	{
-		while (cents >= coin[i])
-		{
-			coins -= coin_values[i];
-			count++;
-		}
+		numCoins += cents / coins[i];
+		cents %= coins[i];
 	}
-	return count;
+
+	return (numCoins);
 }
 
