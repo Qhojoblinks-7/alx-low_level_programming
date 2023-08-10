@@ -11,6 +11,9 @@
 
 int *array_range(int min, int max)
 {
+	int *array;
+	int num_elements, i;
+
 	if (max < min)
 	{
 		return (NULL);
@@ -22,6 +25,10 @@ int *array_range(int min, int max)
 
 	if (array != NULL)
 	{
-		for (i = 0; i < num_elementst; ++)
-
-			defgffd. yy
+		for (i = 0; i < num_elements; i++)
+		{
+			array[i] = min + i;
+		}
+	}
+	return (array);
+}

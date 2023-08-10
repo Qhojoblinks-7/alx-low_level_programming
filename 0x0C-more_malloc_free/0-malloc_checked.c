@@ -1,4 +1,4 @@
-#include "man.h"
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,6 +11,7 @@
 void *malloc_checked(unsigned int b)
 {
 	void *mem = malloc(b);
+
 	if (mem == NULL)
 	{
 		exit(98);

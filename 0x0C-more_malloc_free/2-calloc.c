@@ -12,17 +12,18 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int total_size = nmemb * size;
-
+	int i, total_size = nmemb * size;
+	char *set_mem = 0;
 	void *memory;
-	
-	memory = (char *)malloc(total_size * sozeof(char));
+
+	memory = (char *)malloc(total_size * sizeof(char));
 	if (memory == NULL)
 	{
 		return (NULL);
 	}
 
-	char *set_mem = (char *)memory;
+	set_mem = (char *)memory;
+
 	for (i = 0; i < total_size; i++)
 	{
 		set_mem[i] = 0;
