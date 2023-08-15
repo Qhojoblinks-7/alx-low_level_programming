@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "dog.h""
+#include "dog.h"
 /**
  * _strlen - a fuction that calculates the
  * length of name and owner
+ * @str: the string to be copied
  * Return: length
  */
 
@@ -13,14 +14,15 @@ int _strlen(const char *str)
 
 	while (str[length] != '\0')
 	{
-		legth++;
+		length++;
 	}
 	return (length);
 }
 
 /**
- * string_copy - Function to get the length of a string
+ * string_copy - a function to get the length of a string
  * @str: the string to be copied
+ * Return: a string
  */
 
 char *string_copy(const char *str)
@@ -74,10 +76,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (new_dog->owner == NULL)
 	{
-		free(new_dog ->name);
+		free(new_dog->name);
 		free(new_dog);
 		return (NULL);
 	}
 
-	return new_dog;
+	return (new_dog);
 }
