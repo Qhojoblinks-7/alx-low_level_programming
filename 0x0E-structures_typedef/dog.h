@@ -2,7 +2,7 @@
 #define DOG_H
 
 /**
- * dog - a struct type that cointain members that
+ * struct dog - a struct type that cointain members that
  * holds the name of a dog, the age and the name
  * of the owner
  * @name: First member
