@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "calc.h"
+#include "3-calc.h"
 
 /**
  * op_add - a function that adds two numbers
@@ -10,7 +10,7 @@
 
 int op_add(int a, int b)
 {
-	return(a + b);
+	return (a + b);
 }
 
 /**
@@ -22,7 +22,7 @@ int op_add(int a, int b)
 
 int op_sub(int a, int b)
 {
-	return(a - b);
+	return (a - b);
 }
 
 /**

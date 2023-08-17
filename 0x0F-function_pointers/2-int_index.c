@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include "function_pointers.h"
 
 /**
  * cmp - a function that compare objects
