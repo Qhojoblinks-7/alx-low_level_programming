@@ -3,6 +3,7 @@
 
 /**
  * cmp - a function that compare objects
+ * @num: the object to find
  * Return: the object
  */
 
@@ -32,6 +33,7 @@ int cmp(int num)
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
+
 	if (size <= 0)
 	{
 		return (-1);
