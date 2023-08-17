@@ -11,13 +11,14 @@
 void print_name(char *name, void (*f)(char *name))
 {
 	int len = 0, i = 0;
-	(f)(name);
 
 	while (name[i] != '\0')
 	{
 		len++;
 		i++;
 	}
+
+	(f)(name);
 
 	for (i = 0; i < len; i++)
 	{
