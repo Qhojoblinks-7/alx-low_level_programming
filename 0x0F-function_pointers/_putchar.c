@@ -1,5 +1,5 @@
-#include "function_pointers.h"
 #include <unistd.h>
+#include "function_pointers.h"
 
 /**
  * _putchar - writes the character c to stdout

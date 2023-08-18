@@ -8,6 +8,7 @@
  * name.
  */
 
+int _putchar(char c);
 void print_name(char *name, void (*f)(char *name))
 {
 	int len = 0, i = 0;
@@ -21,10 +22,5 @@ void print_name(char *name, void (*f)(char *name))
 		i++;
 	}
 
-	(f)(name);
-
-	for (i = 0; i < len; i++)
-	{
-		_putchar(name[i]);
-	}
+	f(name);
 }
