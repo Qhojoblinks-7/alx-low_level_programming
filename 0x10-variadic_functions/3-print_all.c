@@ -4,21 +4,22 @@
 
 /**
  * print_all - a function that prints all kinds of format
+ * @format: the format to be printed
  */
 
 void print_all(const char * const format, ...)
 {
 	va_list ptr;
 
-	int num = 0;
+	int num = 0, a;
 	float digit;
 	char c, *str;
 
 	va_start(ptr, format);
 
-	while (format && format[i])
+	while (format && format[a])
 	{
-		switch (format[i])
+		switch (format[a])
 		{
 			case 'i':
 				num = va_arg(ptr, int);
@@ -29,8 +30,8 @@ void print_all(const char * const format, ...)
 				printf("%c", c);
 				break;
 			case 'f':
-				f = va_arg(ptr, double);
-				printf("%f", f);
+				digit = va_arg(ptr, double);
+				printf("%f", digit);
 				break;
 			case 's':
 				str = va_arg(ptr, char *);
@@ -42,11 +43,11 @@ void print_all(const char * const format, ...)
 				break;
 		}
 
-		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's') && format[i + 1])
+		if ((format[a] == 'c' || format[a] == 'i' || format[a] == 'f' || format[a] == 's') && format[a + 1])
 		{
 			printf(", ");
 		}
-		i++;
+		a++;
 	}
 	va_end(ptr);
 	printf("\n");

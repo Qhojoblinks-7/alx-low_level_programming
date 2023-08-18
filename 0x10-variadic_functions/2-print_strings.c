@@ -18,15 +18,15 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 
 	va_start(ptr, n);
 
-	for(i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		str = va_arg(ptr, char *);
 
 		if (str != NULL)
 		{
-			printf("%s",str);
+			printf("%s", str);
 
-			if (seperator != NULL && i < n -1)
+			if (seperator != NULL && i < n - 1)
 			{
 				printf("%s", seperator);
 			}
