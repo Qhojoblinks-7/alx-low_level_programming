@@ -8,7 +8,6 @@
  * name.
  */
 
-int _putchar(char c);
 void print_name(char *name, void (*f)(char *name))
 {
 	int len = 0, i = 0;
