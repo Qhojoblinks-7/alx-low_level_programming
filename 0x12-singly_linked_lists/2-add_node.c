@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stddef.h>
 #include "lists.h"
+#include <string.h>
+#include <stdlib.h>
 
 /**
  * add_node - a function that adds a node to the
@@ -12,12 +14,14 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
+	list_t *temp;
+
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	list_t *temp = (list_t *)malloc(sizeof(list_t));
+	temp = (list_t *)malloc(sizeof(list_t));
 
 	if (temp == NULL)
 	{
@@ -33,7 +37,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	temp->len = strlen(str);
-	temp-> *head;
+	temp->next =  *head;
 	*head = temp;
 
 	return (temp);
