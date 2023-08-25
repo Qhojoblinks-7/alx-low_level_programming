@@ -5,7 +5,7 @@
 
 /**
  * add_node_end - a function that adds a node to the last node
- * head: the head node
+ * @head: the head node
  * @str: the string to be duplicated
  * Return: the address of thenew node
  */
@@ -24,6 +24,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 
 	temp->str = strdup(str);
+
 	if (temp->str == NULL)
 	{
 		free(temp);
@@ -38,6 +39,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	else
 	{
 		list_t *current_node = *head;
+
 		while (current_node->next != NULL)
 		{
 			current_node = current_node->next;
