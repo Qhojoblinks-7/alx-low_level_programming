@@ -11,6 +11,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t count = 0;
+	listint_t *node;
 
 	while(*h == NULL)
 	{
@@ -22,7 +23,6 @@ size_t free_listint_safe(listint_t **h)
 	{
 		free(node);
 		count++;
-		break;
 	}
 	free(node);
 	count++;

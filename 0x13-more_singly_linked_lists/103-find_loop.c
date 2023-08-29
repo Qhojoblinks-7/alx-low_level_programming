@@ -11,24 +11,24 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *slowPoiter = head;
+	listint_t *slowPointer = head;
 	listint_t *fastPointer = head;
 
-	while (fast != NULL && fast->next != NULL)
+	while (fastPointer != NULL && fastPointer->next != NULL)
 	{
-		slowPoiter = slowPoiter->next;
+		slowPointer = slowPointer->next;
 		fastPointer = fastPointer->next->next;
 
-		if (slow == fast)
+		if (slowPointer == fastPointer)
 		{
-			slowPoiter = head;
+			slowPointer = head;
 
-			while (slow != fast)
+			while (slowPointer != fastPointer)
 			{
-				slowPoiter = slowPoiter->next;
+				slowPointer = slowPointer->next;
 				fastPointer = fastPointer->next;
 			}
-			return (slowPoiter);
+			return (slowPointer);
 		}
 	}
 
