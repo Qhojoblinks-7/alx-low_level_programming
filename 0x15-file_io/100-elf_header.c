@@ -8,10 +8,13 @@
  * print_elf_header - Prints the information from the ELF header.
  * @ehdr: Pointer to the ELF header structure.
  */
+
 void print_elf_header(Elf64_Ehdr *ehdr)
 {
+	int i;
+
     printf("  Magic:   ");
-    for (int i = 0; i < EI_NIDENT; i++)
+    for (i = 0; i < EI_NIDENT; i++)
         printf("%02x ", ehdr->e_ident[i]);
     printf("\n");
 
@@ -48,21 +51,24 @@ void print_elf_header(Elf64_Ehdr *ehdr)
  */
 int main(int argc, char *argv[])
 {
+	int fd;
+	ssize_t bytes_read;
+	Elf64_Ehdr ehdr;
+
     if (argc != 2)
     {
         fprintf(stderr, "Usage: %s elf_filename\n", argv[0]);
         return (98);
     }
 
-    int fd = open(argv[1], O_RDONLY);
+    fd = open(argv[1], O_RDONLY);
     if (fd == -1)
     {
         perror("Error");
         return (98);
     }
 
-    Elf64_Ehdr ehdr;
-    ssize_t bytes_read = read(fd, &ehdr, sizeof(ehdr));
+    bytes_read = read(fd, &ehdr, sizeof(ehdr));
     if (bytes_read == -1)
     {
         perror("Error");
