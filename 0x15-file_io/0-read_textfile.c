@@ -7,7 +7,7 @@
  * read_textfile - a function that reads a text file
  * and prints it to the POSIX standard output.
  * @filename: a pointer to the file
- * @size_t letters: size of letters to be read
+ * @letters: size of letters to be read
  * Return: letters read
  */
 
