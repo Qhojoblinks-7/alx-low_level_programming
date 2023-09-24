@@ -13,4 +13,5 @@ int my_printf_unsigned(const char *format, ...);
 int my_printf_hex(const char *format, ...);
 int my_printf_octal(const char *format, ...);
 int my_printf_bin(const char *format, ...);
+int my_printf_pointer(const char *format, ...);
 #endif
