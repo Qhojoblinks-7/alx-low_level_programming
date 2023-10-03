@@ -23,19 +23,20 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	file_descriptor = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IWUSR);
+	file_descriptor = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (file_descriptor == -1)
 	{
 		return (-1);
 	}
 
-	while (text_content[length] != '\0')
-	{
-		length++;
-	}
-
 	if (text_content != NULL)
 	{
+		length = 0;
+		while (text_content[length] != '\0')
+		{
+			length++;
+		}
+
 		bytes_written = write(file_descriptor, text_content, length);
 		if (bytes_written == -1)
 		{
@@ -45,5 +46,5 @@ int create_file(const char *filename, char *text_content)
 	}
 
 	close(file_descriptor);
-	return (1);
+	return ((text_content != NULL) ? bytes_written : 0);
 }

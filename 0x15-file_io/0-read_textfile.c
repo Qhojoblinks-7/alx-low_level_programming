@@ -23,12 +23,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	file = fopen(filename, "r");
+	if (file == NULL)
 	{
-		if (file == NULL)
-		{
 			return (0);
-		}
-
 	}
 
 	fileBuffer = (char *)malloc(sizeof(char) * (letters + 1));
@@ -50,5 +47,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	return (0);
+	return (bytes_written);
 }
