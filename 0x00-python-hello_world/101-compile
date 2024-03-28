@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Check if PYFILE environment variable is set
+if [ -z "$PYFILE" ]; then
+    echo "PYFILE environment variable is not set"
+    exit 1
+fi
+
+# Check if the Python file exists
+if [ ! -f "$PYFILE" ]; then
+    echo "Python file $PYFILE not found"
+    exit 1
+fi
+
+# Compile the Python file
+echo "Compiling '$PYFILE'..."
+python3 -m compileall "$PYFILE" >/dev/null 2>&1
+
+# Check if compilation was successful
+if [ $? -ne 0 ]; then
+    echo "Error: Compilation failed"
+    exit 1
+fi
+
+# Get the filename without extension
+filename=$(basename -- "$PYFILE")
+filename_no_ext="${filename%.*}"
+
+# Check if the compiled file exists
+if [ ! -f "$filename_no_ext.pyc" ]; then
+    echo "Error: Compiled file $filename_no_ext.pyc not found"
+    exit 1
+fi
+
+# Rename the compiled file to match the original filename
+mv "$filename_no_ext.pyc" "$filename_no_ext.c"
+
